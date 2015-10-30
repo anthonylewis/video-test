@@ -1,0 +1,74 @@
+<html>
+<head>
+  <link rel="stylesheet" href="frameplayer.min.css">
+  <script src="frameplayer.min.js"></script>
+</head>
+<body>
+<div style="float: left; padding: 5px;">
+  <img src="video-320-15.gif" width="320" height="180">
+  <p>320x180, 15s, GIF, 2.9 MB</p>
+</div>
+<div style="float: left; padding: 5px;">
+  <img src="video-240-15.gif" width="320" height="180">
+  <p>240x135, 15s, GIF, 1.7 MB</p>
+</div>
+<div style="float: left; padding: 5px;">
+  <img src="video-160-15.gif" width="320" height="180">
+  <p>160x90, 15s, GIF, 776 KB</p>
+</div>
+<div style="clear: both;"></div>
+
+<div style="float: left; padding: 5px;">
+  <img src="video-320-10.gif" width="320" height="180">
+  <p>320x180, 10s, GIF, 1.9 MB</p>
+</div>
+<div style="float: left; padding: 5px;">
+  <img src="video-240-10.gif" width="320" height="180">
+  <p>240x135, 10s, GIF, 1.1 MB</p>
+</div>
+<div style="float: left; padding: 5px;">
+  <img src="video-160-10.gif" width="320" height="180">
+  <p>160x90, 10s, GIF, 495 KB</p>
+</div>
+<div style="clear: both;"></div>
+
+<div style="float: left; padding: 5px">
+  <div id="player-320-15" class="frameplayer" data-vidsrc="video-320-15.json"></div>
+  <p>320x180, 15s, JPEG, 1.7 MB</p>
+</div>
+<div style="float: left; padding: 5px">
+  <div id="player-240-15" class="frameplayer" data-vidsrc="video-240-15.json"></div>
+  <p>240x135, 15s, JPEG, 1.2 MB</p>
+</div>
+<div style="float: left; padding: 5px">
+  <div id="player-160-15" class="frameplayer" data-vidsrc="video-160-15.json"></div>
+  <p>160x90, 15s, JPEG, 736 KB</p>
+</div>
+<div style="clear: both;"></div>
+
+<div style="float: left; padding: 5px;">
+  <video src="Episode+1-+Backyard+Bash_Final-SD.mp4" controls></video>
+  <p>Original Video, 6.9 MB</p>
+</div>
+<div style="clear: both;"></div>
+
+<script>
+  var options = ({
+    'controls': false,
+    'autoplay': true,
+    'backwards': false,
+    'startFrame': 1,
+    'width': '320px',
+    'height': '180px',
+  });
+
+  var player320 = new FramePlayer('player-320-15', options);
+  var player240 = new FramePlayer('player-240-15', options);
+  var player160 = new FramePlayer('player-160-15', options);
+
+  player320.play();
+  player240.play();
+  player160.play();
+</script>
+</body>
+</html>
