@@ -52,6 +52,12 @@
 </div>
 <div style="clear: both;"></div>
 
+<div style="float: left; padding: 5px">
+  <div id="player-320-3-12" class="frameplayer" data-vidsrc="video-320-3-12.json"></div>
+  <p>320x180, 3s, 12fps, JPEG, 353 KB</p>
+</div>
+<div style="clear: both;"></div>
+
 <div style="float: left; padding: 5px;">
   <video src="Episode+1-+Backyard+Bash_Final-SD.mp4" controls></video>
   <p>Original Video, 6.9 MB</p>
@@ -59,24 +65,28 @@
 <div style="clear: both;"></div>
 
 <script>
-  var options = ({
+  var options = {
     'controls': false,
     'autoplay': true,
     'backwards': false,
     'startFrame': 1,
     'width': '320px',
     'height': '180px',
-  });
+  };
 
   var player320 = new FramePlayer('player-320-15', options);
   var player240 = new FramePlayer('player-240-15', options);
   var player160 = new FramePlayer('player-160-15', options);
   var player3203 = new FramePlayer('player-320-3', options);
 
+  options.rate = 10;
+  var player320312 = new FramePlayer('player-320-3-12', options);
+
   player320.play();
   player240.play();
   player160.play();
   player3203.play();
+  player320312.play();
 </script>
 </body>
 </html>
